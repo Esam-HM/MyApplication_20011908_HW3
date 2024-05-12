@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomAutoCompleteTextView" parent="Widget.AppCompat.AutoCompleteTextView">
+        <!-- Customize background color -->
+        <item name="android:background">@color/white</item>
+        <!-- Add other AutoCompleteTextView customizations -->
+    </style>
+
+    
+
+</resources>

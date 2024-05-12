@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity">
+
+    <LinearLayout
+        android:id="@+id/barId_aa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_primary"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBtn_aa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back_icon"
+            android:backgroundTint="@color/my_primary"
+            android:contentDescription="@string/backStr"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:alpha="1">
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myAccountStr"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:padding="15dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barId_aa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/cc">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/profileId_aa"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/default_profile_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/progressBar_aa"
+                android:layout_marginTop="10dp">
+            </ImageView>
+
+            <ProgressBar
+                android:id="@+id/progressBar_aa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileId_aa"
+                app:layout_constraintBottom_toTopOf="@id/infoId_aa">
+            </ProgressBar>
+
+            <LinearLayout
+                android:id="@+id/infoId_aa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progressBar_aa"
+                app:layout_constraintBottom_toTopOf="@id/updateBtnId_aa"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_acc"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp">
+                </TextView>
+
+
+                <EditText
+                    android:id="@+id/nameFieldId_aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableStart="@drawable/person_icon"
+                    android:background="@drawable/box2"
+                    android:drawablePadding="10dp"
+                    android:padding="12dp"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:hint="@string/name"
+                    android:textColorHint="@color/hintColor"
+                    android:layout_marginBottom="15dp">
+                </EditText>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/srName_acc"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/srnameFieldId_aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableStart="@drawable/person_icon"
+                    android:background="@drawable/box2"
+                    android:drawablePadding="10dp"
+                    android:padding="12dp"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:hint="@string/surname"
+                    android:textColorHint="@color/hintColor"
+                    android:layout_marginBottom="15dp">
+                </EditText>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stdID_acc"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/stdIdFieldId_aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/box2"
+                    android:text="@string/empty"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="12dp"
+                    app:drawableStartCompat="@drawable/person_icon"
+                    android:drawablePadding="10dp"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Email_acc"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/emailChkId_aa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prv"
+                        android:textColor="@color/black"
+                        android:layout_gravity="end">
+                    </CheckBox>
+
+                </GridLayout>
+
+
+                <TextView
+                    android:id="@+id/emailFieldId_aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/box2"
+                    android:text="@string/empty"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="12dp"
+                    android:layout_marginBottom="15dp"
+                    app:drawableStartCompat="@drawable/mail_icon"
+                    android:drawablePadding="10dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password_acc"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/passwFieldId_aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableStart="@drawable/person_icon"
+                    android:background="@drawable/box2"
+                    android:drawablePadding="10dp"
+                    android:padding="12dp"
+                    android:inputType="text"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:hint="@string/password"
+                    android:textColorHint="@color/hintColor"
+                    android:layout_marginBottom="5dp">
+                </EditText>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phone_num"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/numChkId_aa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prv"
+                        android:textColor="@color/black"
+                        android:layout_gravity="end">
+                    </CheckBox>
+
+                </GridLayout>
+
+                <EditText
+                    android:id="@+id/phoneNumFieldId_aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableStart="@drawable/phone_icon"
+                    android:background="@drawable/box2"
+                    android:drawablePadding="10dp"
+                    android:padding="12dp"
+                    android:layout_marginBottom="15dp"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:hint="@string/enterHere"
+                    android:textColorHint="@color/hintColor">
+                </EditText>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/educ_info_acc"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/educFieldId_aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableStart="@drawable/educ_icon"
+                    android:background="@drawable/box2"
+                    android:drawablePadding="10dp"
+                    android:padding="12dp"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:hint="@string/enterHere"
+                    android:textColorHint="@color/hintColor"
+                    android:layout_marginBottom="5dp">
+                </EditText>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/instagram"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/instaChkId_aa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prv"
+                        android:textColor="@color/black"
+                        android:layout_gravity="end">
+                    </CheckBox>
+
+                </GridLayout>
+
+                <EditText
+                    android:id="@+id/instaFieldId_aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableStart="@drawable/media_icon"
+                    android:background="@drawable/box2"
+                    android:drawablePadding="10dp"
+                    android:padding="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:hint="@string/enterHere"
+                    android:textColorHint="@color/hintColor">
+                </EditText>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/twitter"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/twtChkId_aa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prv"
+                        android:textColor="@color/black"
+                        android:layout_gravity="end">
+                    </CheckBox>
+
+                </GridLayout>
+
+                <EditText
+                    android:id="@+id/twitFieldId_aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableStart="@drawable/media_icon"
+                    android:background="@drawable/box2"
+                    android:drawablePadding="10dp"
+                    android:padding="12dp"
+                    android:layout_marginBottom="15dp"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:hint="@string/enterHere"
+                    android:textColorHint="@color/hintColor">
+                </EditText>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/updateProgBarId_aa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoId_aa"
+                app:layout_constraintBottom_toTopOf="@id/updateBtnId_aa">
+            </ProgressBar>
+
+            <Button
+                android:id="@+id/updateBtnId_aa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/updateProgBarId_aa"
+                app:layout_constraintBottom_toTopOf="@id/forwardBtnsId_aa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/update"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:paddingBottom="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="40dp"
+                android:paddingStart="40dp"
+                android:backgroundTint="@color/my_primary">
+            </Button>
+
+            <LinearLayout
+                android:id="@+id/forwardBtnsId_aa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/updateBtnId_aa"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/phoneBtnId_aa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/phone"
+                    android:background="@color/green"
+                    android:layout_marginEnd="8dp">
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/wtBtnId_aa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wtsapp"
+                    android:layout_marginEnd="8dp">
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/gmailBtnId_aa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gmail">
+                </ImageView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

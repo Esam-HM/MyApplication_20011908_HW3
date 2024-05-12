@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="my_primary">#004aac</color>
+    <color name="my_secondary">#005CAC</color>
+    <color name="my_third">#c7b6e4</color>
+    <color name="my_forth">#CA4D26</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="gri">#D7D4D4</color>
+    <color name="blueLight">#349AAC</color>
+    <color name="green">#00FF00</color>
+    <color name="cc">#DCD9D9</color>
+    <color name="hintColor">#8C8B8B</color>
+</resources>
